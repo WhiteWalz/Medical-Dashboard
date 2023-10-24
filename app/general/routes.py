@@ -7,5 +7,3 @@ from app.general import bp
 @bp.route('/')
 def index():
     return render_template('general/index.html')
-    
-    
