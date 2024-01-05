@@ -3,14 +3,17 @@ from flask_login import UserMixin
 from hashlib import sha256
 from dotenv import load_dotenv
 from enum import Enum
+from os import getenv
 
-load_dotenv('../.env')
+load_dotenv('../.env', override=True)
+SALT = getenv('SALT')
 
 class roles(Enum):
-    ADMIN = 0
-    MANAGER = 1
+    GENERAL = 0
+    RECEPTION = 1
     INVENTORY = 2
-    RECEPTION = 3
+    MANAGER = 3
+    ADMIN = 4
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)

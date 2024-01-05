@@ -1,5 +1,6 @@
 from flask import render_template, redirect, request
 from flask_login import login_required, login_url, login_user, current_user, logout_user
+from ..models import Items
 
 from app.auth import bp
 

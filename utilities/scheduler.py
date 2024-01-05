@@ -35,3 +35,9 @@ class Node:
         self.parentContext = parentContext
         self.doctors = doctors
         self.employees = employees
+
+    def expand(self):
+        return
+    
+    def calcBestScore(self):
+        return
